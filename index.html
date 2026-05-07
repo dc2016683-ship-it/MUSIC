@@ -60,9 +60,19 @@
             border: 5px solid white; box-shadow: 0 15px 35px rgba(13, 71, 161, 0.4);
             object-fit: cover;
         }
-        .album-title { font-size: 1.8rem; color: #0d47a1; font-weight: 900; margin-top: 5px; }
-        .album-desc { font-size: 0.8rem; color: #1976d2; font-weight: bold; text-transform: uppercase; }
-        .album-warning { font-size: 0.75rem; color: #0d47a1; font-style: italic; opacity: 0.8; }
+
+        /* Estilo para el aviso del nuevo álbum */
+        .status-notice {
+            font-size: 0.85rem;
+            color: #d32f2f;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            max-width: 300px;
+        }
 
         .back-btn { background: none; border: none; color: #0d47a1; font-weight: bold; cursor: pointer; align-self: flex-start; font-size: 1rem; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -96,10 +106,13 @@
             <div id="albums" class="screen">
                 <button class="back-btn" onclick="nav('home')">← VOLVER</button>
                 <div class="album-content">
+                    <!-- Solo el aviso arriba -->
+                    <div class="status-notice">
+                        Its Dilan Time Album en proceso pero no habrá más canciones de IA aquí
+                    </div>
+                    
                     <img class="album-img" src="https://i.postimg.cc/VSxnVwnw/IMG-7805.jpg" alt="Its Dilan Time">
-                    <div class="album-title">ITS DILAN TIME</div>
-                    <div class="album-desc">Disponible en BandLab y SoundCloud</div>
-                    <div class="album-warning">Álbum que no habrá música de IA, pura música real</div>
+                    <!-- Se eliminó el título y descripción de abajo -->
                 </div>
             </div>
         </div>
